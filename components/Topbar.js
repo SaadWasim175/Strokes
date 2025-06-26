@@ -30,7 +30,7 @@ export default function TopNavbar() {
       <div className="nav-right">
         <Link href="/gallery" className={pathname === "/gallery" ? "nav-link active" : "nav-link"}>Gallery</Link>
         <Link href="/create" className={pathname === "/create" ? "nav-link active" : "nav-link"}>Create</Link>
-        <Link href="/create" className={pathname === "/create" ? "nav-link active" : "nav-link"}>Github</Link>
+        <Link href="https://github.com/SaadWasim175/Strokes.git" className={pathname === "/create" ? "nav-link active" : "nav-link"}>Github</Link>
         {user && (
           <>
             <Link href="/dashboard" className={pathname === "/dashboard" ? "nav-link active" : "nav-link"}>Dashboard</Link>
