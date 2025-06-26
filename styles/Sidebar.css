@@ -1,0 +1,116 @@
+@import url("https://fonts.cdnfonts.com/css/segoe-script");
+.sidebar {
+  width: 240px;
+  background-color: #ffe2c4;
+  font-family: "Segoe Script", sans-serif;
+  border-right: 2px solid #fbd5c0;
+  padding: 1.5rem 1rem;
+  min-height: 100vh;
+  transition: width 0.3s ease, transform 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.sidebar.collapsed {
+  width: 72px;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar-item a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background-color: #fff6e7;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-item a:hover {
+  background-color: #ffe4d6;
+}
+
+/* Mobile-specific sidebar behavior */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .sidebar.mobile-closed {
+    transform: translateX(-100%);
+  }
+
+  .mobile-float-toggle {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 1100;
+    background: #fff;
+    border-radius: 50%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    color: #333;
+  }
+
+  .toggle-btn {
+    display: none; /* hide collapse button on mobile */
+  }
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background-color: #fff0e6;
+  color: #333;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  background-color: #fbd5c0;
+  color: #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.user-email {
+  font-size: 0.875rem;
+  overflow-wrap: break-word;
+  max-width: 120px;
+}

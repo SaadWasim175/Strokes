@@ -1,0 +1,80 @@
+@import url("https://fonts.cdnfonts.com/css/segoe-script");
+
+.stylized-text{
+  font-family: "Segoe Script", sans-serif;
+  font-weight: 800;
+  }
+
+.auth-container {
+  margin: auto;
+  padding: 2em;
+  max-width: 400px;
+  text-align: center;
+}
+.auth-input {
+  display: block;
+  width: 100%;
+  margin: 0.8em 0;
+  padding: 0.6em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.auth-button {
+  padding: 0.6em 1.4em;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ff7676, #ff9e9e);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.auth-button:hover {
+  background: linear-gradient(135deg, #ff4f4f, #ff7c7c);
+}
+.auth-msg {
+  margin-top: 1em;
+  color: #444;
+}
+.auth-link {
+  margin-top: 1em;
+  font-size: 0.9rem;
+}
+
+.auth-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.auth-box {
+  background: white;
+  border-radius: 20px;
+  padding: 2em;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  animation: fade-in 0.8s ease-out;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+  animation: peachy-loop 20s linear infinite;
+  background-color: #ffe9e0;
+  transition: background-color 2s ease;
+}
+
+@keyframes peachy-loop {
+  0% { background-color: #f5a177; }
+  20% { background-color: #ffb9a0; }
+  40% { background-color: #f7cdb1; }
+  60% { background-color: #ffdfd1; }
+  80% { background-color: #fce7e1; }
+  100% { background-color: #fff5f0; }
+}
+

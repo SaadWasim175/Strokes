@@ -1,0 +1,206 @@
+@import url("https://fonts.cdnfonts.com/css/segoe-script");
+:root {
+  --peach-bg: #fffaf5;
+  --peach-soft: #ffe2d5;
+  --peach-main: #ff8665;
+  --peach-dark: #ff6640;
+  --peach-text: #8a2715;
+}
+
+.dashboard-layout {
+  display: flex;
+  background: var(--peach-bg);
+  min-height: 100vh;
+}
+
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.art-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.art-card:hover {
+  transform: translateY(-4px);
+}
+
+.square-thumb {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.art-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.art-info {
+  padding: 1rem;
+  text-align: left;
+  background-color: rgb(246, 206, 172);
+}
+
+.art-info h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--peach-text);
+}
+
+.art-info p {
+  font-size: 0.8rem;
+  color: #777;
+  margin: 0.3rem 0;
+}
+
+@media (max-width: 900px) {
+  .art-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-content {
+    margin-left: 0;
+    max-width: 100vw;
+  }
+}
+
+
+.dashboard-content {
+  flex: 1;
+  margin-left: 240px;
+  padding: 2rem;
+  max-width: calc(100vw - 240px); 
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+.btn-del{
+  background-color: rgb(251, 186, 129);
+  color: #8a2715;
+  border: none;
+  border-radius: 7px;
+  padding: 15px;
+  font-size: 1rem;
+}
+
+.btn-del:hover{
+  background-color: peachpuff;
+  color: #8a2715;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  color: var(--peach-text);
+  margin-bottom: 1.5rem;
+  text-align: left;
+  font-family: "Segoe Script", sans-serif;
+}
+
+.empty-art {
+  background: var(--peach-soft);
+  border: 2px dashed peachpuff;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  margin-right: 200px;
+  font-family: "Segoe Script", sans-serif;
+}
+
+.create-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: peachpuff;
+  color: black;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.create-btn:hover {
+  background: #ffc6b2;
+}
+
+.masonry-grid {
+  column-count: 3;
+  column-gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .masonry-grid {
+    column-count: 1;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.masonry-item:hover {
+  transform: translateY(-4px);
+}
+
+.masonry-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.masonry-caption {
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.masonry-caption h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: #333;
+}
+
+.masonry-caption p {
+  font-size: 0.75rem;
+  color: #777;
+  margin: 0.3rem 0;
+}
+
+.masonry-caption button {
+  margin-top: 0.4rem;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.75rem;
+  background: var(--peach-dark);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.masonry-caption button:hover {
+  background: #e65330;
+}

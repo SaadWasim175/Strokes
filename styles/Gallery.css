@@ -1,0 +1,155 @@
+@import url("https://fonts.cdnfonts.com/css/segoe-script");
+
+:root {
+  --peach-bg: #fffaf5;
+  --peach-soft: #ffe2d5;
+  --peach-main: #ff8665;
+  --peach-dark: #ff6640;
+  --peach-text: #8a2715;
+}
+
+.gallery-wrapper {
+  padding: 2rem;
+  background-color: var(--peach-bg);
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin-left: 240px; /* sidebar space */
+}
+
+.gallery-title {
+  font-size: 2rem;
+  color: var(--peach-text);
+  margin-bottom: 2rem;
+  font-family: "Segoe Script", sans-serif;
+  text-align: left;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+}
+
+.square-thumb {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-info {
+  padding: 1rem;
+  background-color: var(--peach-soft);
+  text-align: left;
+}
+
+.gallery-info h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--peach-text);
+}
+
+.gallery-info p {
+  font-size: 0.8rem;
+  margin: 0.3rem 0;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .gallery-wrapper {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .gallery-title {
+    text-align: center;
+  }
+}
+
+.empty-state {
+  background-color: var(--peach-soft);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  color: var(--peach-text);
+  font-style: italic;
+  margin: 2rem 0;
+}
+
+.empty-state a {
+  color: var(--peach-dark);
+  text-decoration: underline;
+}
+
+.like-btn {
+  background-color: #ffddd1;
+  color: var(--peach-text);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin-top: 0.3rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.like-btn:hover {
+  background-color: #ffc2a8;
+}
+
+.art-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.art-modal-content {
+  background: #fffaf5;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  font-family: "Segoe Script", sans-serif;
+}
+
+.art-modal-content img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.close-btn{
+  background-color: rgb(255, 237, 150);
+  color: black;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+}

@@ -1,0 +1,59 @@
+:root {
+  --peach-main: #ff8665;
+  --peach-bg: rgba(255, 134, 101, 0.1);
+  --peach-hover: rgba(255, 134, 101, 0.25);
+  --peach-text: #8a2715;
+}
+
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--peach-bg);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  font-family: "Segoe Script", sans-serif;
+  border-bottom: 1px solid rgba(255, 134, 101, 0.2);
+}
+
+.nav-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--peach-text);
+  text-decoration: none;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  color: var(--peach-text);
+  background: transparent;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.nav-link:hover {
+  background: var(--peach-hover);
+}
+
+.active {
+  background: var(--peach-hover);
+  font-weight: bold;
+}
+
+.logout-btn {
+  font-family: inherit;
+}

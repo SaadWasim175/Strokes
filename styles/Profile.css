@@ -1,0 +1,107 @@
+@import url("https://fonts.cdnfonts.com/css/segoe-script");
+
+:root {
+  --peach-bg: #fffaf5;
+  --peach-soft: #ffe2d5;
+  --peach-main: #ff8665;
+  --peach-dark: #ff6640;
+  --peach-text: #8a2715;
+}
+
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--peach-bg);
+  margin-left: 240px;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.profile-card {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: "Segoe Script", sans-serif;
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-section {
+  margin-bottom: 1.5rem;
+}
+
+.avatar-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--peach-main);
+}
+
+.avatar-placeholder {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--peach-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h2 {
+  color: var(--peach-text);
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+p {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 1.2rem 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+button, .profile-btn {
+  font-family: inherit;
+  font-size: 0.95rem;
+  margin-top: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.profile-btn {
+  background: peachpuff;
+  color: black;
+  text-decoration: none;
+}
+
+.logout-btn {
+  background: #eee;
+  color: var(--peach-text);
+  margin-top: 0.5rem;
+}
+
+.profile-btn:hover, .logout-btn:hover {
+  opacity: 0.9;
+}
