@@ -17,7 +17,7 @@ const navItems = [
   { name: "Home", href: "/", icon: Home },
   { name: "Create", href: "/create", icon: Palette },
   { name: "My Artwork", href: "/dashboard", icon: FolderOpen },
-  { name: "GitHub", href: "https://github.com/your-repo-url", icon: Github, external: true },
+  { name: "GitHub", href: "https://github.com/SaadWasim175/Strokes.git", icon: Github, external: true },
   {name: "Gallery", href:"/gallery", icon:Album}
 ];
 
