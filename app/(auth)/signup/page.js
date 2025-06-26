@@ -12,10 +12,17 @@ export default function SignUpPage() {
   const [password, setPassword] = useState("");
   const [msg, setMsg] = useState("");
 
-  const handleSignUp = async () => {
-    const { error } = await supabase.auth.signUp({ email, password });
-    setMsg(error ? error.message : "Check your email to confirm!");
-  };
+const handleSignUp = async () => {
+  const { error } = await supabase.auth.signUp({
+    email,
+    password,
+    options: {
+      emailRedirectTo: "https://strokes-7u7f.vercel.app/login"
+    }
+  });
+  setMsg(error ? error.message : "Check your email to confirm!");
+};
+
 
   return (
     <div className="auth-wrapper">
